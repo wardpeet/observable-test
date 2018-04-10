@@ -1,0 +1,26 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script>
+        performance.mark('scripts');
+      </script>
+    <script src="dist/index.min.js"></script>
+    <script>
+      if (typeof window.MEDIAHUIS.user !== 'undefined') {
+        console.log('user subscribe');
+        console.time('start subscribe');
+        MEDIAHUIS.user.subscribe(user => {
+          console.timeEnd('start subscribe');
+          console.log(user);
+        });
+      }
+    </script>
+    <script>
+        performance.mark('endOfDOM');
+        performance.measure('HTML (nearly) done parsing', undefined, 'endOfDOM');
+        performance.measure('evaling scripts', 'scripts', 'endOfDOM');
+        </script>
+  </body>
+</html>

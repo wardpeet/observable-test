@@ -1,0 +1,18 @@
+{
+  "name": "observables-test",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "BROWSER=true NODE_ENV=production rollup -c",
+    "start": "python -m SimpleHTTPServer 8000"
+  },
+  "dependencies": {
+    "rxjs": "^6.0.0-beta.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6",
+    "@mediahuis/pulse-rollup-config": "^0.0.5",
+    "rollup": "0.48"
+  }
+}
