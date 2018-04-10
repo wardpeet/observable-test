@@ -10,9 +10,7 @@
     <script>
       if (typeof window.MEDIAHUIS.user !== 'undefined') {
         console.log('user subscribe');
-        console.time('start subscribe');
         MEDIAHUIS.user.subscribe(user => {
-          console.timeEnd('start subscribe');
           console.log(user);
         });
       }
